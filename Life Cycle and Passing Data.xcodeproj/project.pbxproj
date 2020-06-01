@@ -9,25 +9,27 @@
 /* Begin PBXBuildFile section */
 		76008F592484C1A7004CC97C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76008F582484C1A7004CC97C /* AppDelegate.swift */; };
 		76008F5B2484C1A7004CC97C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76008F5A2484C1A7004CC97C /* SceneDelegate.swift */; };
-		76008F602484C1A7004CC97C /* Life Cycle.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76008F5E2484C1A7004CC97C /* Life Cycle.storyboard */; };
+		76008F602484C1A7004CC97C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76008F5E2484C1A7004CC97C /* Main.storyboard */; };
 		76008F622484C1AA004CC97C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76008F612484C1AA004CC97C /* Assets.xcassets */; };
 		76008F652484C1AA004CC97C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76008F632484C1AA004CC97C /* LaunchScreen.storyboard */; };
 		76008F722484C61E004CC97C /* DesignableUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76008F712484C61E004CC97C /* DesignableUITextField.swift */; };
 		76008F742484C68C004CC97C /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76008F732484C68C004CC97C /* UIViewControllerExt.swift */; };
 		76008F7D2484D759004CC97C /* OneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76008F7C2484D759004CC97C /* OneViewController.swift */; };
+		76008F7F2484F013004CC97C /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76008F7E2484F013004CC97C /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		76008F552484C1A7004CC97C /* Life Cycle and Passing Data.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Life Cycle and Passing Data.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		76008F582484C1A7004CC97C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76008F5A2484C1A7004CC97C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		76008F5F2484C1A7004CC97C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Life Cycle.storyboard"; sourceTree = "<group>"; };
+		76008F5F2484C1A7004CC97C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		76008F612484C1AA004CC97C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76008F642484C1AA004CC97C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		76008F662484C1AA004CC97C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		76008F712484C61E004CC97C /* DesignableUITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableUITextField.swift; sourceTree = "<group>"; };
 		76008F732484C68C004CC97C /* UIViewControllerExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
 		76008F7C2484D759004CC97C /* OneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneViewController.swift; sourceTree = "<group>"; };
+		76008F7E2484F013004CC97C /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				76008F7C2484D759004CC97C /* OneViewController.swift */,
+				76008F7E2484F013004CC97C /* SecondViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -114,7 +117,7 @@
 		76008F752484D2DA004CC97C /* Schene */ = {
 			isa = PBXGroup;
 			children = (
-				76008F5E2484C1A7004CC97C /* Life Cycle.storyboard */,
+				76008F5E2484C1A7004CC97C /* Main.storyboard */,
 				76008F632484C1AA004CC97C /* LaunchScreen.storyboard */,
 			);
 			path = Schene;
@@ -205,7 +208,7 @@
 			files = (
 				76008F652484C1AA004CC97C /* LaunchScreen.storyboard in Resources */,
 				76008F622484C1AA004CC97C /* Assets.xcassets in Resources */,
-				76008F602484C1A7004CC97C /* Life Cycle.storyboard in Resources */,
+				76008F602484C1A7004CC97C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76008F7F2484F013004CC97C /* SecondViewController.swift in Sources */,
 				76008F742484C68C004CC97C /* UIViewControllerExt.swift in Sources */,
 				76008F7D2484D759004CC97C /* OneViewController.swift in Sources */,
 				76008F592484C1A7004CC97C /* AppDelegate.swift in Sources */,
@@ -227,12 +231,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		76008F5E2484C1A7004CC97C /* Life Cycle.storyboard */ = {
+		76008F5E2484C1A7004CC97C /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				76008F5F2484C1A7004CC97C /* Base */,
 			);
-			name = "Life Cycle.storyboard";
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		76008F632484C1AA004CC97C /* LaunchScreen.storyboard */ = {
