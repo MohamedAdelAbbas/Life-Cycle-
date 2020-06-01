@@ -20,7 +20,7 @@ class FirsrViewController: UIViewController {
     @IBAction func InstancePropertyBtnPressed(_ sender: UIButton) {
         //1. Pass data using instance properties
            func presentSecondViewController() {
-               let storyboard = UIStoryboard(name: "Pass Data", bundle: nil)
+               let storyboard = UIStoryboard(name: "PassData", bundle: nil)
                let viewController = storyboard.instantiateViewController(identifier: "SecondViewController") as! SecondViewController
             viewController.instancePropertyLabeltext = "Mohamed Adel"
               
@@ -39,8 +39,5 @@ class FirsrViewController: UIViewController {
             SecondViewController.segueLabeltext = "Segue label is set from Firstvc"
         }
         
-//        if let vc = segue.destination as? SecondViewController {
-//            vc.segueLabeltext = "Segue label is set from Firstvc"
-//        }
     }
 }
