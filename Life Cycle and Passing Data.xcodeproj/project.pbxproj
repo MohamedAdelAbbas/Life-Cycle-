@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		76008F592484C1A7004CC97C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76008F582484C1A7004CC97C /* AppDelegate.swift */; };
 		76008F5B2484C1A7004CC97C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76008F5A2484C1A7004CC97C /* SceneDelegate.swift */; };
-		76008F5D2484C1A7004CC97C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76008F5C2484C1A7004CC97C /* ViewController.swift */; };
-		76008F602484C1A7004CC97C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76008F5E2484C1A7004CC97C /* Main.storyboard */; };
+		76008F602484C1A7004CC97C /* Life Cycle.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76008F5E2484C1A7004CC97C /* Life Cycle.storyboard */; };
 		76008F622484C1AA004CC97C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76008F612484C1AA004CC97C /* Assets.xcassets */; };
 		76008F652484C1AA004CC97C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76008F632484C1AA004CC97C /* LaunchScreen.storyboard */; };
+		76008F722484C61E004CC97C /* DesignableUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76008F712484C61E004CC97C /* DesignableUITextField.swift */; };
+		76008F742484C68C004CC97C /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76008F732484C68C004CC97C /* UIViewControllerExt.swift */; };
+		76008F7D2484D759004CC97C /* OneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76008F7C2484D759004CC97C /* OneViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		76008F552484C1A7004CC97C /* Life Cycle and Passing Data.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Life Cycle and Passing Data.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		76008F582484C1A7004CC97C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76008F5A2484C1A7004CC97C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		76008F5C2484C1A7004CC97C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		76008F5F2484C1A7004CC97C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		76008F5F2484C1A7004CC97C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Life Cycle.storyboard"; sourceTree = "<group>"; };
 		76008F612484C1AA004CC97C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76008F642484C1AA004CC97C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		76008F662484C1AA004CC97C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76008F712484C61E004CC97C /* DesignableUITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableUITextField.swift; sourceTree = "<group>"; };
+		76008F732484C68C004CC97C /* UIViewControllerExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
+		76008F7C2484D759004CC97C /* OneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,89 @@
 		76008F572484C1A7004CC97C /* Life Cycle and Passing Data */ = {
 			isa = PBXGroup;
 			children = (
-				76008F582484C1A7004CC97C /* AppDelegate.swift */,
-				76008F5A2484C1A7004CC97C /* SceneDelegate.swift */,
-				76008F5C2484C1A7004CC97C /* ViewController.swift */,
-				76008F5E2484C1A7004CC97C /* Main.storyboard */,
-				76008F612484C1AA004CC97C /* Assets.xcassets */,
-				76008F632484C1AA004CC97C /* LaunchScreen.storyboard */,
-				76008F662484C1AA004CC97C /* Info.plist */,
+				76008F6F2484C538004CC97C /* AppDelegate + Delegates */,
+				76008F702484C558004CC97C /* Extensions */,
+				76008F6E2484C522004CC97C /* Model */,
+				76008F6D2484C519004CC97C /* View */,
+				76008F6C2484C505004CC97C /* Controller */,
+				76008F752484D2DA004CC97C /* Schene */,
+				76008F772484D343004CC97C /* Resources */,
 			);
 			path = "Life Cycle and Passing Data";
+			sourceTree = "<group>";
+		};
+		76008F6C2484C505004CC97C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				76008F7C2484D759004CC97C /* OneViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		76008F6D2484C519004CC97C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		76008F6E2484C522004CC97C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		76008F6F2484C538004CC97C /* AppDelegate + Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				76008F582484C1A7004CC97C /* AppDelegate.swift */,
+				76008F5A2484C1A7004CC97C /* SceneDelegate.swift */,
+			);
+			path = "AppDelegate + Delegates";
+			sourceTree = "<group>";
+		};
+		76008F702484C558004CC97C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				76008F712484C61E004CC97C /* DesignableUITextField.swift */,
+				76008F732484C68C004CC97C /* UIViewControllerExt.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		76008F752484D2DA004CC97C /* Schene */ = {
+			isa = PBXGroup;
+			children = (
+				76008F5E2484C1A7004CC97C /* Life Cycle.storyboard */,
+				76008F632484C1AA004CC97C /* LaunchScreen.storyboard */,
+			);
+			path = Schene;
+			sourceTree = "<group>";
+		};
+		76008F772484D343004CC97C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				76008F782484D454004CC97C /* Assets */,
+				76008F792484D469004CC97C /* Configration */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		76008F782484D454004CC97C /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				76008F612484C1AA004CC97C /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		76008F792484D469004CC97C /* Configration */ = {
+			isa = PBXGroup;
+			children = (
+				76008F662484C1AA004CC97C /* Info.plist */,
+			);
+			path = Configration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +205,7 @@
 			files = (
 				76008F652484C1AA004CC97C /* LaunchScreen.storyboard in Resources */,
 				76008F622484C1AA004CC97C /* Assets.xcassets in Resources */,
-				76008F602484C1A7004CC97C /* Main.storyboard in Resources */,
+				76008F602484C1A7004CC97C /* Life Cycle.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,21 +216,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76008F5D2484C1A7004CC97C /* ViewController.swift in Sources */,
+				76008F742484C68C004CC97C /* UIViewControllerExt.swift in Sources */,
+				76008F7D2484D759004CC97C /* OneViewController.swift in Sources */,
 				76008F592484C1A7004CC97C /* AppDelegate.swift in Sources */,
 				76008F5B2484C1A7004CC97C /* SceneDelegate.swift in Sources */,
+				76008F722484C61E004CC97C /* DesignableUITextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		76008F5E2484C1A7004CC97C /* Main.storyboard */ = {
+		76008F5E2484C1A7004CC97C /* Life Cycle.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				76008F5F2484C1A7004CC97C /* Base */,
 			);
-			name = Main.storyboard;
+			name = "Life Cycle.storyboard";
 			sourceTree = "<group>";
 		};
 		76008F632484C1AA004CC97C /* LaunchScreen.storyboard */ = {
@@ -285,7 +365,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Life Cycle and Passing Data/Info.plist";
+				INFOPLIST_FILE = "Life Cycle and Passing Data/Resources/Configration/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +382,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Life Cycle and Passing Data/Info.plist";
+				INFOPLIST_FILE = "Life Cycle and Passing Data/Resources/Configration/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
