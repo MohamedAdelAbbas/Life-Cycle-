@@ -50,7 +50,7 @@ class OneViewController: UIViewController {
         //        presentDetail(SecondViewController)
         //
                 let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
-                let vc = storyboard.instantiateViewController(identifier: "SecondViewController")
+                let vc = storyboard.instantiateViewController(identifier: "twoViewController")
         //      vc.modalPresentationStyle = .fullScreen
         //      self.present(vc, animated: true, completion: nil)
           self.navigationController?.pushViewController(vc, animated: true)

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class twoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,6 +17,9 @@ class SecondViewController: UIViewController {
     }
     
 
-   
-
+    @IBAction func donePressed(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+       // dismiss(animated: true, completion: nil)
+    }
+    
 }

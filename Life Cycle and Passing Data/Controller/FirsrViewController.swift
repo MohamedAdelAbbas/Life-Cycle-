@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  FirsrViewController.swift
 //  Life Cycle and Passing Data
 //
 //  Created by Mohamed Adel on 6/1/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class FirsrViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
