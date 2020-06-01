@@ -13,8 +13,8 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var instancePropertyLabel: UILabel!
     @IBOutlet weak var segueLabel: UILabel!
     
-    var instancePropertyLabeltext: String = ""
-    var segueLabeltext: String = ""
+    var instancePropertyLabeltext: String?
+    var segueLabeltext: String?
     
     
     override func viewDidLoad() {

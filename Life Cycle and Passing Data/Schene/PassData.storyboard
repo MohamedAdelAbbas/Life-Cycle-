@@ -41,7 +41,7 @@
                                 </state>
                                 <connections>
                                     <action selector="segueBtnPressed:" destination="YkS-vC-l9O" eventType="touchUpInside" id="2wS-LV-pDs"/>
-                                    <segue destination="61J-hY-q4j" kind="show" identifier="SecondViewController" id="rhY-a4-obj"/>
+                                    <segue destination="61J-hY-q4j" kind="show" identifier="SecondViewController" id="hUh-9g-8SH"/>
                                 </connections>
                             </button>
                         </subviews>
