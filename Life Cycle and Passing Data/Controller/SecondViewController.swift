@@ -10,13 +10,24 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+    @IBOutlet weak var instancePropertyLabel: UILabel!
+    @IBOutlet weak var segueLabel: UILabel!
+    
+    var instancePropertyLabeltext: String = ""
+    var segueLabeltext: String = ""
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        instancePropertyLabel.text = instancePropertyLabeltext
+        segueLabel.text = segueLabeltext
     }
     
 
-   
-
+    @IBAction func fristBtnPressed(_ sender: UIButton) {
+    }
+    
+    @IBAction func secondBtnPressed(_ sender: UIButton) {
+    }
+    
 }
