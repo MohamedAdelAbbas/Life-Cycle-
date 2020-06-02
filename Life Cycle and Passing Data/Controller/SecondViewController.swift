@@ -15,7 +15,8 @@ class SecondViewController: UIViewController {
     
     var instancePropertyLabeltext: String?
     var segueLabeltext: String?
-    
+    weak var pizzaDelegate: PizzaDelegate? // Step 3D
+    weak var backgroundDelegate: BackgroundDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,9 +26,21 @@ class SecondViewController: UIViewController {
     
 
     @IBAction func fristBtnPressed(_ sender: UIButton) {
+        //Passing data using delegates
+        pizzaDelegate?.onPizzaReady(type: "Margerita") //Step 4D
+        /////////////////////////////////////////////////////////////////////////////////////////////////////
+        self.view.backgroundColor = .yellow
+         backgroundDelegate?.setBackground(color: .yellow)
     }
     
     @IBAction func secondBtnPressed(_ sender: UIButton) {
+        self.view.backgroundColor = .cyan
+         backgroundDelegate?.setBackground(color: .cyan)
     }
     
+}
+
+
+protocol BackgroundDelegate: class {
+    func setBackground(color: UIColor)
 }
