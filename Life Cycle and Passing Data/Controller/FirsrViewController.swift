@@ -10,12 +10,26 @@ import UIKit
 
 class FirsrViewController: UIViewController {
 
+    static let notificationName = Notification.Name("Mohamed Adel")
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    override func viewWillAppear(_ animated: Bool) {
+        NotificationCenter.default.addObserver(self, selector: #selector(onNotification(notification:)), name: FirsrViewController.notificationName, object: nil)
+    }
     
+    @objc func onNotification(notification: Notification) {
+        print("My Name is: ", notification.userInfo?["myName"] as? String ?? "Not Exsist")
+    }
+//    /*Removing the removing the notificaiton observer*/
+//    override func viewWillDisappear(_ animated: Bool) {
+//        NotificationCenter.default.removeObserver(self, name: FirsrViewController.notificationName, object: nil)
+//    }
+//
+//    deinit {
+//    }
 
     @IBAction func InstancePropertyBtnPressed(_ sender: UIButton) {
         presentSecondViewController()
