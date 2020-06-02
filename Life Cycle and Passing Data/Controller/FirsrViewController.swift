@@ -25,7 +25,7 @@ class FirsrViewController: UIViewController {
            let storyboard = UIStoryboard(name: "PassData", bundle: nil)
            let viewController = storyboard.instantiateViewController(identifier: "SecondViewController") as! SecondViewController
         viewController.instancePropertyLabeltext = "Mohamed Adel"
-          
+        viewController.backgroundDelegate = self
     self.navigationController?.pushViewController(viewController, animated: true)
        }
 
@@ -43,13 +43,21 @@ class FirsrViewController: UIViewController {
 //        if let vc = segue.destination as? SecondViewController {
 //            vc.segueLabeltext = "Segue label is set from vcFrist"
 //        }
-        //Passing data using delegates Backword
-         if let vc = segue.destination as? SecondViewController {
-                   vc.pizzaDelegate = self // Step 5D
-                   vc.backgroundDelegate = self
+//        //Passing data using delegates Backword
+//         if let vc = segue.destination as? SecondViewController {
+//                   vc.pizzaDelegate = self // Step 5D
+//                   vc.backgroundDelegate = self
+//        }
+        //Passing data using Closure Backword
+        if let vc = segue.destination as? SecondViewController {
+            // implemetation of body function
+            vc.countString = { text in
+                // self.replacingDelegates(type: text)
+                return text.count
+            }
         }
         
-   }
+    }
 }
 
 extension FirsrViewController: PizzaDelegate, BackgroundDelegate {
@@ -64,4 +72,8 @@ extension FirsrViewController: PizzaDelegate, BackgroundDelegate {
    // step 1D
 protocol PizzaDelegate: class {
     func onPizzaReady(type: String)
+}
+
+protocol BackgroundDelegate: class {
+    func setBackground(color: UIColor)
 }

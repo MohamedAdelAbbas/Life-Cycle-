@@ -9,7 +9,7 @@
 import UIKit
 
 class SecondViewController: UIViewController {
-
+    
     @IBOutlet weak var instancePropertyLabel: UILabel!
     @IBOutlet weak var segueLabel: UILabel!
     
@@ -18,29 +18,34 @@ class SecondViewController: UIViewController {
     weak var pizzaDelegate: PizzaDelegate? // Step 3D
     weak var backgroundDelegate: BackgroundDelegate?
     
+    //Passing data using closures
+    var countString: ((String) -> Int)?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         instancePropertyLabel.text = instancePropertyLabeltext
         segueLabel.text = segueLabeltext
     }
     
-
+    
     @IBAction func fristBtnPressed(_ sender: UIButton) {
         //Passing data using delegates
         pizzaDelegate?.onPizzaReady(type: "Margerita") //Step 4D
         /////////////////////////////////////////////////////////////////////////////////////////////////////
         self.view.backgroundColor = .yellow
-         backgroundDelegate?.setBackground(color: .yellow)
+        backgroundDelegate?.setBackground(color: .yellow)
+        //Passing data using closures
+        let result = countString?("Deliver pizza") ?? 0
+        print("completionHandler returns... ", result)
+        
     }
     
     @IBAction func secondBtnPressed(_ sender: UIButton) {
         self.view.backgroundColor = .cyan
-         backgroundDelegate?.setBackground(color: .cyan)
+        backgroundDelegate?.setBackground(color: .cyan)
     }
     
 }
 
 
-protocol BackgroundDelegate: class {
-    func setBackground(color: UIColor)
-}
+
