@@ -34,12 +34,12 @@ class SecondViewController: UIViewController {
         /////////////////////////////////////////////////////////////////////////////////////////////////////
         self.view.backgroundColor = .yellow
         backgroundDelegate?.setBackground(color: .yellow)
-        //Passing data using closures
-//        let result = countString?("Deliver pizza") ?? 0
-//        print("completionHandler returns... ", result)
+      //  Passing data using closures
+        let result = countString?("Deliver pizza") ?? 0
+        print("completionHandler returns... ", result)
         //Passing data using notification center 
-        NotificationCenter.default.post(name: Notification.Name("Mohamed Adel"), object: nil, userInfo: ["myName": "Mohamed Adel", "isImportant": true, "name": "Ahly"])
-        
+//        NotificationCenter.default.post(name: Notification.Name("Mohamed Adel"), object: nil, userInfo: ["myName": "Mohamed Adel", "isImportant": true, "name": "Ahly"])
+//
     }
     
     @IBAction func secondBtnPressed(_ sender: UIButton) {

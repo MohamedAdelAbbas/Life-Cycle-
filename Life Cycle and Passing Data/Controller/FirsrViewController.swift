@@ -10,6 +10,7 @@ import UIKit
 
 class FirsrViewController: UIViewController {
 
+    @IBOutlet weak var closuerLabel: UILabel!
     static let notificationName = Notification.Name("Mohamed Adel")
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,7 +67,9 @@ class FirsrViewController: UIViewController {
         if let vc = segue.destination as? SecondViewController {
             // implemetation of body function
             vc.countString = { text in
-                // self.replacingDelegates(type: text)
+                print("closure_Back: \(text)")
+                self.closuerLabel.text = text
+               // self.replacingDelegates(type: text)
                 return text.count
             }
         }
