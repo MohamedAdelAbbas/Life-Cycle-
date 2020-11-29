@@ -60,7 +60,7 @@ class FirsrViewController: UIViewController {
 //        }
 //        //Passing data using delegates Backword
 //         if let vc = segue.destination as? SecondViewController {
-//                   vc.pizzaDelegate = self // Step 5D
+//                   vc.pizzaDelegate = self // Step 5D  Delegtion importent step
 //                   vc.backgroundDelegate = self
 //        }
         //Passing data using Closure Backword
@@ -78,7 +78,7 @@ class FirsrViewController: UIViewController {
 }
 
 extension FirsrViewController: PizzaDelegate, BackgroundDelegate {
-     // Step 2D
+     // Step 4D Implementation Protocol
     func onPizzaReady(type: String) {
         print("My type is \(type)")
     }
@@ -86,11 +86,4 @@ extension FirsrViewController: PizzaDelegate, BackgroundDelegate {
            self.view.backgroundColor = color
        }
 }
-   // step 1D
-protocol PizzaDelegate: class {
-    func onPizzaReady(type: String)
-}
-
-protocol BackgroundDelegate: class {
-    func setBackground(color: UIColor)
-}
+  

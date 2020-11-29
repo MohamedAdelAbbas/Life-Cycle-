@@ -15,7 +15,7 @@ class SecondViewController: UIViewController {
     
     var instancePropertyLabeltext: String?
     var segueLabeltext: String?
-    weak var pizzaDelegate: PizzaDelegate? // Step 3D
+    weak var pizzaDelegate: PizzaDelegate? // Step 2 reference to protocol
     weak var backgroundDelegate: BackgroundDelegate?
     
     //Passing data using closures
@@ -30,7 +30,7 @@ class SecondViewController: UIViewController {
     
     @IBAction func fristBtnPressed(_ sender: UIButton) {
         //Passing data using delegates
-        pizzaDelegate?.onPizzaReady(type: "Margerita") //Step 4D
+        pizzaDelegate?.onPizzaReady(type: "Margerita") //Step 3 call protocol
         /////////////////////////////////////////////////////////////////////////////////////////////////////
         self.view.backgroundColor = .yellow
         backgroundDelegate?.setBackground(color: .yellow)
@@ -51,3 +51,11 @@ class SecondViewController: UIViewController {
 
 
 
+// step 1 define protocol
+protocol PizzaDelegate: class {
+ func onPizzaReady(type: String)
+}
+
+protocol BackgroundDelegate: class {
+ func setBackground(color: UIColor)
+}
